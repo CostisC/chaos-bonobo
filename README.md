@@ -35,3 +35,4 @@ systemctl start chaos-bonobo-server
 
 The Server includes the latest Documentation of the framework.  
 Simply browse to `http://<chaos-bonobo_server_ip>:4440/docs` and continue from there.  
+The same documentation can alternatively be visited in this [**Doc Pages**](https://costisc.github.io/chaos-bonobo/).  

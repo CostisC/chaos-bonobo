@@ -5,7 +5,6 @@ SERVERDIR 	:= server
 DOCGENERTD	:= $(SERVERDIR)/docs
 AGENTDIR	:= agent
 
-
 include Version
 
 .PHONY: build_docs build_server all clean
@@ -14,18 +13,23 @@ include Version
 all: 	build_docs build_server build_agent
 
 
-
 build_docs:	|$(VENV)
+ifdef publish
+	$(eval action := gh-deploy)
+else
+	$(eval action := build)
+endif
 	# set the Version in the About page
 	sed "s/<version>/$(VERSION).$(RELEASE)/" \
 		< $(DOCSOURCE)/docs/about.md_template > $(DOCSOURCE)/docs/about.md
 
-	@source $(VENV)/bin/activate && cd $(DOCSOURCE) && mkdocs build
+	@source $(VENV)/bin/activate && cd $(DOCSOURCE) && mkdocs $(action)
 	@rm -rf $(DOCGENERTD) && mv $(DOCSOURCE)/site $(DOCGENERTD) && \
 		echo "Documentation generated in $(DOCGENERTD)/"
 	@rm -rf $(DOCSOURCE)/docs/about.md
 
-
+publish_docs:
+	@$(MAKE) build_docs publish=ok
 
 $(VENV):
 	echo "*** Create the mkdocs enviroment"
@@ -35,7 +39,7 @@ $(VENV):
 $(SERVERDIR)/node_modules:
 	echo "*** Download the Node.js dependencies of the Server"
 	cd $(SERVERDIR) && npm install
-	
+
 
 
 build_server: 	|$(SERVERDIR)/node_modules
