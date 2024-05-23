@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Experiments by Type - Chaos Bonobo</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="..">Chaos Bonobo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setting the Experiments</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../commonExperiments/" class="dropdown-item">Common Configuration</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Experiments by Type</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../developerGuide/" class="nav-link">Developer Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../commonExperiments/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../developerGuide/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#list-of-experiment-types" class="nav-link">List of Experiment Types</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#block_address" class="nav-link">Block_Address</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#traffic_throttling" class="nav-link">Traffic_Throttling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#kill_process" class="nav-link">Kill_Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#stop_service" class="nav-link">Stop_Service</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#spawn_command" class="nav-link">Spawn_Command</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#reboot" class="nav-link">Reboot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#kernel_panic" class="nav-link">Kernel_Panic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="list-of-experiment-types">List of Experiment Types<a class="headerlink" href="#list-of-experiment-types" title="Permanent link">#</a></h2>
+<p>The list below explains the different types of supported experiments, with their respective settings.<br />
+The implementation and instructions for these experiments are incorporated in the Agents.<br />
+If new failures are wished to be included in your experiments, the Agents can be expanded, according to the <a href="../developerGuide/">Developer Guide</a>.  </p>
+<h3 id="block_address">Block_Address<a class="headerlink" href="#block_address" title="Permanent link">#</a></h3>
+<p>Add a firewall rule to block incoming/outgoing traffic from/to the specified source/destination.<br />
+Duration instruction: Required  </p>
+<p><strong>Options</strong><br />
+<em>policy</em>: Possible values: INPUT, OUTPUT<br />
+<em>ip</em>:  The IP address to block. A source address in the INPUT policy case, or a destination address in the OUTPUT policy case.<br />
+<em>protocol</em>: The protocol (e.g. tcp, udp) when referencing a port<br />
+<em>sport</em>: Block packages with this source port <br />
+<em>dport</em>: Block packages with this destination port</p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Block_Address
+  options:
+    policy: INPUT
+    ip: 10.10.140.100
+</code></pre>
+<h3 id="traffic_throttling">Traffic_Throttling<a class="headerlink" href="#traffic_throttling" title="Permanent link">#</a></h3>
+<p>Impose delays, jitter or packet loss to the egress traffic of a network interface.<br />
+Delay and jitter cannot be applied together with packet loss, at the same time.<br />
+Duration instruction: Required  </p>
+<p><strong>Options</strong><br />
+<em>device</em>: The network interface device (e.g. eth0)<br />
+<em>delay</em>: Milliseconds of delay<br />
+<em>jitter</em>: Milliseconds of jitter. It should always be set together with <em>delay</em><br />
+<em>packet_loss</em>: Percentage of lost packets   </p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Traffic_Throttling
+  options:
+    device: eth0
+    delay: 200
+    jitter: 100
+</code></pre>
+<h3 id="kill_process">Kill_Process<a class="headerlink" href="#kill_process" title="Permanent link">#</a></h3>
+<p>Send a specific signal (SIGKILL, by default) to the running process(es), matching a name.<br />
+Duration instruction: N/A</p>
+<p><strong>Options</strong><br />
+<em>pname</em>: The name of running process(es) to match. It will match the output of <em>pidof</em> command. <br />
+<em>signal</em>: The signal to send to the matched process(es). It can be either the signal's full name or its numeric representation.  Default: SIGKILL(9)</p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Kill_Process
+  options:
+    pname: mongod
+    signal: SIGTERM
+</code></pre>
+<h3 id="stop_service">Stop_Service<a class="headerlink" href="#stop_service" title="Permanent link">#</a></h3>
+<p>Stop a systemd service, for a specified period.<br />
+Duration instruction: Required  </p>
+<p><strong>Options</strong><br />
+<em>service</em>: The name of the running service to stop.  </p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Stop_Service
+  options:
+    service: sshd
+</code></pre>
+<h3 id="spawn_command">Spawn_Command<a class="headerlink" href="#spawn_command" title="Permanent link">#</a></h3>
+<p>Spawn a process, which should be run as a detached daemon.<br />
+Duration instruction: Required  </p>
+<p><strong>Options</strong><br />
+<em>command</em>: The command line</p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Spawn_Command
+  options:
+    command: 'sleep 200'
+</code></pre>
+<h3 id="reboot">Reboot<a class="headerlink" href="#reboot" title="Permanent link">#</a></h3>
+<p>Reboot the system<br />
+Duration instruction: N/A </p>
+<p><strong>Options</strong><br />
+N/A</p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Reboot
+</code></pre>
+<h3 id="kernel_panic">Kernel_Panic<a class="headerlink" href="#kernel_panic" title="Permanent link">#</a></h3>
+<p>Cause a Kernel Panic<br />
+Duration instruction: N/A </p>
+<p><strong>Options</strong><br />
+N/A</p>
+<p><strong>Example</strong>  </p>
+<pre><code>type: Kernel_Panic
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

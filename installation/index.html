@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installation - Chaos Bonobo</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="..">Chaos Bonobo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Installation</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setting the Experiments</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../commonExperiments/" class="dropdown-item">Common Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../typeExperiments/" class="dropdown-item">Experiments by Type</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../developerGuide/" class="nav-link">Developer Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../commonExperiments/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#install-the-server" class="nav-link">Install the Server</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#server-configuration" class="nav-link">Server Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#start-the-server" class="nav-link">Start the Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#install-the-agents" class="nav-link">Install the Agents</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#agent-configuration" class="nav-link">Agent Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#dynamic-host-ids" class="nav-link">Dynamic host IDs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#start-the-agent" class="nav-link">Start the Agent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="install-the-server">Install the Server<a class="headerlink" href="#install-the-server" title="Permanent link">#</a></h2>
+<p>On the system that will host the Server, run:</p>
+<pre><code>rpm -ivh chaos-bonobo-server-x.y-z.rpm
+</code></pre>
+<h3 id="server-configuration">Server Configuration<a class="headerlink" href="#server-configuration" title="Permanent link">#</a></h3>
+<p>By default, the Server will be listening on port :4440 and will load the description of experiments from file <code>/etc/chaos-bonobo/experiments.yaml</code>.<br />
+If however the default values should be overriden, this can be done though <code>/etc/chaos-bonobo/server.conf</code>:</p>
+<pre><code>PORT=4440
+EXPERIMENT_FILE=/etc/chaos-bonobo/experiments.yaml
+</code></pre>
+<p>Next, the experiments should be set (ref. <a href="../commonExperiments/">How to set the experiments</a>)</p>
+<h3 id="start-the-server">Start the Server<a class="headerlink" href="#start-the-server" title="Permanent link">#</a></h3>
+<p>To start the Server, run:</p>
+<pre><code>systemctl start chaos-bonobo-server
+</code></pre>
+<p>If there are changes in the experiments, or simply their relative trigger or duration times should be re-evaluated, the Server will have to be reloaded:</p>
+<pre><code>systemctl reload chaos-bonobo-server
+</code></pre>
+<p>To stop the Server:</p>
+<pre><code>systemctl stop chaos-bonobo-server
+</code></pre>
+<blockquote>
+<blockquote>
+<p><em>Note: If the Server stays down for more than a pre-defined duration (ref. <a href="./#agent-configuration">TOLERANCE</a> setting) the Agents will cancel their scheduled experiments.</em></p>
+</blockquote>
+</blockquote>
+<p><br/>
+<br/></p>
+<hr>
+
+<h2 id="install-the-agents">Install the Agents<a class="headerlink" href="#install-the-agents" title="Permanent link">#</a></h2>
+<p>On each targeted system, install the Agent with the following command:</p>
+<pre><code>rpm -ivh chaos-bonobo-agent-x.y-z.rpm
+</code></pre>
+<h3 id="agent-configuration">Agent Configuration<a class="headerlink" href="#agent-configuration" title="Permanent link">#</a></h3>
+<p>Set the Agent's configuration in file <code>/etc/chaos-bonobo/agent.conf</code>:</p>
+<pre><code># The server's listening port 
+PORT=4440
+
+# The server's listening address 
+ADDRESS=127.0.0.1
+
+# A script to dynamically compute this host's ID 
+IDFILE=/etc/chaos-bonobo/id_script.sh
+
+# A static ID for this host. It will override the IDFILE option
+#ID=
+
+# Logs filename (default: bonobo.log)
+LOGFILE=/var/log/chaos-bonobo-agent/bonobo.log
+
+# A time tolerance (in minutes) that the system can be in an air-gapped state (i.e. it cannot talk with the server).
+# After that time, all registered experiements will be removed 
+TOLERANCE=5
+</code></pre>
+<h3 id="dynamic-host-ids">Dynamic host IDs<a class="headerlink" href="#dynamic-host-ids" title="Permanent link">#</a></h3>
+<p>A host identifies itself with an ID (ref. Common experiment's <a href="../commonExperiments/#common-experiment-settings">host</a> field). This is also how it advertises itself to the Server. 
+This ID can be either static or dynamic. For instance, in the case of a cluster of hosts, where one node has a distinguished or elevated role 
+(e.g. being the master or active node) the dynamic ID can be used, so that the node can identify its having that special role.<br />
+The Agent will compute its dynamic ID, before each communication with the Server.<br />
+The dynamic ID should be the output of the <em>"IDFILE"</em> script.  </p>
+<blockquote>
+<blockquote>
+<p><em>Note: If the IDFILE script fails, with a return code other than 0, the host's ID will default to its hostname</em></p>
+</blockquote>
+</blockquote>
+<p><br/>
+<strong>Example of a collocated cluster</strong><br />
+As an example, suppose a collocated cluster of two nodes, in an active/passive resilience mode, where at any given time the active node 
+acquires a single virtual IP address (VIP) - i.e. alias or secondary address.<br />
+For example, on the active node of such a cluster, the assigned IP addresses would be as follows 
+- provided that the VIP (10.5.42.62 in this example) is plumbed on the 'eth0' network card interface:</p>
+<pre><code> # ip a show dev eth0
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:56:94:4e:61 brd ff:ff:ff:ff:ff:ff
+    altname enp2s0
+    altname ens32
+    inet 10.5.42.60/27 brd 10.5.42.63 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet 10.5.42.62/27 scope global secondary eth0
+       valid_lft forever preferred_lft forever
+    inet6 fd00:10:5:42::27/123 scope global
+       valid_lft forever preferred_lft forever
+    inet6 fd00:10:5:42::25/123 scope global
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:56ff:fe94:4e61/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>In this example, the active node could identify its role by verifying that the cluster's VIP is assigned to it. 
+The VIP could be used as the dynamic ID by which the active node advertises itself to the Server, as such.<br />
+The IDFILE could be as follows:  </p>
+<pre><code>ifname=eth0
+ip a show dev $ifname | awk '
+        /secondary/ {
+                if (match($0, /inet? (.*)\//, a)) {
+                        print a[1]
+                        exit 0
+                }
+                else exit 1
+        }
+'
+</code></pre>
+<p><br/></p>
+<h3 id="start-the-agent">Start the Agent<a class="headerlink" href="#start-the-agent" title="Permanent link">#</a></h3>
+<p>To start the Agent, run:</p>
+<pre><code>systemctl start chaos-bonobo-agent
+</code></pre>
+<p>To stop the Server:</p>
+<pre><code>systemctl stop chaos-bonobo-agent
+</code></pre>
+<p>In order to maintain that the Agents start up at every system boot up, it is advised that you also activate them:</p>
+<pre><code>systemctl enable chaos-bonobo-agent
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
