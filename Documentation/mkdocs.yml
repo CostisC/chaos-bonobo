@@ -1,0 +1,31 @@
+site_name: 'Chaos Bonobo'
+
+
+dev_addr: '10.4.143.40:8000'
+
+theme:
+  name: mkdocs
+  nav_style: dark
+  navigation_depth: 3
+  #highlightjs: true
+  #hljs_languages:
+  #  - yaml
+  #  - python
+  #  - bash
+
+markdown_extensions:
+  - toc:
+        permalink: "#"
+
+extra_css:
+  - style.css
+
+nav:
+    - Introduction: index.md
+    - Installation: installation.md
+    - Setting the Experiments:
+        - Common Configuration: commonExperiments.md
+        - Experiments by Type: typeExperiments.md
+    - Developer Guide: developerGuide.md
+    - About: about.md
+

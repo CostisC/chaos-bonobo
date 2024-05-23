@@ -1,0 +1,22 @@
+{
+    "appenders": {
+        "logs": {
+            "type": "file",
+            "filename": "/var/log/chaos-bonobo-server/bonobo.log",
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d] [%p] - %m"
+            },
+            "maxLogSize": 1e7,
+            "backups": 10,
+            "compress": true
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": ["logs"],
+            "level": "info"
+        }
+    }
+}
+

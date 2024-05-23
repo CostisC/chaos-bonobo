@@ -1,0 +1,22 @@
+{
+  "name": "chaos-bonobo",
+  "version": "1.0.0",
+  "description": "A framework for inducing Chaos Engineering experiments",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chaos engineering"
+  ],
+  "author": "CostisC",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "log4js": "^6.9.1",
+    "yargs": "^17.7.2"
+  }
+}

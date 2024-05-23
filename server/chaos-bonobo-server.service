@@ -1,0 +1,13 @@
+[Unit]
+Description=The Chaos Bonobo server
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/chaos-bonobo/server.conf
+ExecStart=/usr/bin/node /usr/share/chaos-bonobo-server/bonobo-server.js -p $PORT -e $EXPERIMENT_FILE
+ExecReload=/bin/kill -s SIGUSR1 $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

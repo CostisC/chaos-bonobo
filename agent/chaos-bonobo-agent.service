@@ -1,0 +1,12 @@
+[Unit]
+Description=The Chaos Bonobo agent
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/chaos-bonobo/agent.conf
+ExecStart=/usr/share/chaos-bonobo-agent/bonobo-agent.py -p $PORT -a $ADDRESS -l $LOGFILE -f $IDFILE -i $ID -t $TOLERANCE
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

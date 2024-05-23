@@ -1,0 +1,7 @@
+site/
+.venv
+server/docs/
+__pycache__
+*.rpm
+node_modules/
+package-lock.json
