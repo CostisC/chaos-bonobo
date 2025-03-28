@@ -9,7 +9,7 @@ The Server should run on a separate host, and it is where the user will schedule
 ### Build the components
 > Note: In order to advance the release number of the produced next deliverables, update the `Version` file before building the components.
 
-There are three make targets that will generate the following delivarbles:
+There are three make targets that will generate the following deliverables:
 - **build_agent**: Produce an RPM package which will install the Agent 
 - **build_docs**: Generate Documentation pages, to be included in a new release of a Server package. 
 It should be executed, if there are any changes in the Documentation content.
